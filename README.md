@@ -55,22 +55,30 @@ APP_URL="http://localhost:4002"
 
 ---
 
+## 🔒 Security Features (Latest Updates)
+
+- **Browser-Side API Keys**: Gemini API keys are now securely stored in your browser's `localStorage` and act natively. Keys are never saved to the backend.
+- **RCE Mitigation**: AI-based data transformations now use robust AST evaluation via `mathjs` instead of arbitrary JavaScript execution, ensuring safe operations on your data.
+- **XSS Protection**: Markdown responses from the AI are fully sanitized using `DOMPurify`.
+- **Robust IP Handling**: Standardized and secure client IP resolution.
+
+---
+
 ## 📝 Configuration
 
 To change the ports, edit the following:
-- **Frontend Port**: Modify `start_server.bat` (change the `-p` value).
+- **Frontend Port**: Modify `start_server.bat`.
 - **Backend Port**: Update `backend/server.js` or set a `PORT` environment variable in `.env.local`.
 
 ---
 
-## 🤝 Contributing
+## 🤝 Contributing & Git Instructions
 
 This is a public open-source project. Contributions are welcome!
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+To push updates after fixing issues or adding features:
+1. Stage your changes: `git add .`
+2. Commit with descriptives: `git commit -m "Fix security issues and modularize backend"`
+3. Push to main: `git push origin main`
 
 ---
 

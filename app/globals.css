@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+  /* Dark theme (default) */
   --color-surface: #0f1419;
   --color-surface-container-lowest: #0a0f14;
   --color-surface-container-low: #171c21;
@@ -33,3 +34,56 @@ body {
 ::-webkit-scrollbar-track { background: var(--color-surface-container-lowest); }
 ::-webkit-scrollbar-thumb { background: var(--color-surface-container-highest); }
 ::-webkit-scrollbar-thumb:hover { background: var(--color-primary); }
+
+/* ==================== LIGHT THEME ==================== */
+html.light {
+  --color-surface: #f8f9fb;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f0f2f5;
+  --color-surface-container: #e8eaed;
+  --color-surface-container-high: #dde0e4;
+  --color-surface-container-highest: #d0d4d8;
+
+  --color-primary: #00796b;
+  --color-primary-container: #b2dfdb;
+  --color-secondary: #c62828;
+  --color-error: #b71c1c;
+  --color-error-container: #ffcdd2;
+
+  --color-on-surface: #1a1c1e;
+  --color-on-surface-variant: #44474a;
+  --color-outline-variant: #c4c7cc;
+}
+
+html.light ::-webkit-scrollbar-track { background: #f0f2f5; }
+html.light ::-webkit-scrollbar-thumb { background: #c4c7cc; }
+html.light ::-webkit-scrollbar-thumb:hover { background: #00796b; }
+
+/* Light theme log panel fix */
+html.light .log-text {
+  color: #006d4e !important;
+}
+
+/* Sidebar fold animation */
+.sidebar-fold {
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: left center;
+}
+.sidebar-fold.folded {
+  width: 0px !important;
+  opacity: 0;
+  transform: perspective(800px) rotateY(-90deg);
+  overflow: hidden;
+}
+.sidebar-fold.expanded {
+  opacity: 1;
+  transform: perspective(800px) rotateY(0deg);
+}
+
+/* Fold toggle button */
+.fold-toggle {
+  transition: transform 0.3s ease;
+}
+.fold-toggle.folded {
+  transform: rotate(180deg);
+}

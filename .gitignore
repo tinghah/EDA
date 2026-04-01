@@ -4,4 +4,9 @@ coverage/
 .DS_Store
 *.log
 .env*
-!.env.example
+backend/uploads/
+backend/users.json
+backend/files.json
+backend/node_modules/
+package-lock.json
+backend/package-lock.json

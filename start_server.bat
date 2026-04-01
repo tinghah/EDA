@@ -23,8 +23,8 @@ if not exist node_modules (
     echo [INFO] Frontend node_modules not found. Installing...
     call npm install
 )
-:: Use -p to set the port for Next.js
-start "EDA Frontend" /min cmd /c "npm run dev -- -p 4002"
+:: Use -p for port and -H 0.0.0.0 for Intranet/Cloudflare remote access
+start "EDA Frontend" /min cmd /c "npm run dev -- -H 0.0.0.0 -p 4002"
 
 echo.
 echo ======================================================
