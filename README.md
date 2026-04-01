@@ -4,8 +4,6 @@ Industrial Data Workspace for Excel Data Analysis. Modern, High-Performance, and
 
 ---
 
-
-
 ## 🚀 Overview
 
 **Excel Data Analyzer (EDA)** is a specialized tool built for industrial data management. It provides a powerful interface for cleaning, analyzing, and visualizing industrial sensor data, inventory logs, and factory output reports.
