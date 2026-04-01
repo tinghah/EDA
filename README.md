@@ -37,41 +37,16 @@ Leveraging **Next.js 15**, **Express**, and **Gemini AI**, EDA allows teams to:
 
 ---
 
-## 🚀 Installation & Running
+## 🚀 How to Run
 
-### 1. Register for API Keys
-Create a `.env.local` in the root directory and add your Gemini API Key:
+Before starting, ensure you have a `.env.local` file in the root directory with your API key:
 ```env
 GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
 APP_URL="http://localhost:4002"
 ```
 
-### 2. Run the App (Windows Batch)
-For ease of use, we provide batch scripts to run both the frontend and backend concurrently in the background.
-
-#### **To Start Servers:**
-Simply double-click:
-- **`start_server.bat`** (Starts Frontend on **Port 4002** & Backend on **Port 4444**)
-
-#### **To Stop Servers:**
-Double-click:
-- **`stop_server.bat`** (Kills the running processes on specified ports)
-
-### 3. Manual Startup
-If you prefer the command line:
-
-**Frontend:**
-```bash
-npm install
-npm run dev -- -p 4002
-```
-
-**Backend:**
-```bash
-cd backend
-npm install
-npm start
-```
+- **To start**: Simply double-click `start_server.bat`. It will automatically handle dependency installation if `node_modules` are missing.
+- **To stop**: Double-click `stop_server.bat`.
 
 ---
 
